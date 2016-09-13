@@ -5,7 +5,17 @@ caseconv for C#
 Usage
 ----
 ```c#
-var tokens = CaseTokenizer.Tokenize("caseConv_testFwer_e");
-            Console.WriteLine(string.Join(", ", tokens));
-            Console.WriteLine(CaseConv.Join(tokens, CaseType.Snake));
+var tokens = CaseTokenizer.Tokenize("caseConv_testWorld_bye");
+            
+// case, conv, test, world, bye
+string.Join(", ", tokens);
+
+// case_conv_test_world_bye
+CaseConv.Join(tokens, CaseType.Snake);
+
+// Case-Conv-Test-World-Bye
+CaseConv.Join(tokens, CaseType.HttpHeader);
+
+// caseConvTestWorldBye
+CaseConv.Join(tokens, CaseType.Camel);
 ```
