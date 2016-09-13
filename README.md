@@ -14,7 +14,7 @@ string.Join(", ", tokens);
 CaseConv.Join(tokens, CaseType.Snake);
 
 // Case-Conv-Test-World-Bye
-CaseConv.Join(tokens, CaseType.HttpHeader);
+CaseConv.Join(tokens, CaseType.Train);
 
 // caseConvTestWorldBye
 CaseConv.Join(tokens, CaseType.Camel);
