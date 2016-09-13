@@ -28,7 +28,7 @@ enum CaseType {
     Camel,
     Pascal,
     Snake,
-    HttpHeader
+    Train
 }
 class CaseConv
 {
@@ -50,7 +50,7 @@ class CaseConv
                 case CaseType.Snake:
                     sb.Append(token + "_");
                     break;
-                case CaseType.HttpHeader:
+                case CaseType.Train:
                     sb.Append(ToUpperFirstCh(token) + "-");
                     break;
             }
@@ -58,7 +58,7 @@ class CaseConv
             isFirstToken = false;
         }
 
-        if (type == CaseType.Snake || type == CaseType.HttpHeader)
+        if (type == CaseType.Snake || type == CaseType.Train)
             sb.Remove(sb.Length - 1, 1);
 
         return sb.ToString();
